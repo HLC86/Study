@@ -7,7 +7,6 @@ import java.util.concurrent.Executors;
  * Created by u0149852 on 15/07/2014.
  */
 public class ExceptionThread implements Runnable{
-    @Override
     public void run() {
         throw new RuntimeException();
     }

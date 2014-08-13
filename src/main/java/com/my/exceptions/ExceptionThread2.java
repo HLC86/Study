@@ -10,11 +10,9 @@ import java.util.concurrent.ThreadFactory;
 public class ExceptionThread2 {
     public static void main(String[] args){
         ExecutorService exec = Executors.newCachedThreadPool(new ThreadFactory() {
-            @Override
             public Thread newThread(Runnable r) {
                 Thread t = new Thread(r);
                 t.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
-                    @Override
                     public void uncaughtException(Thread t, Throwable e) {
                         System.out.println("my UncaughtExceptionHandler " + e);
                     }
@@ -22,14 +20,25 @@ public class ExceptionThread2 {
                 return t;
             }
         });
-        exec.execute(new Runnable() {
-            @Override
+
+        Runnable r = new Runnable() {
             public void run() {
                 Thread t = Thread.currentThread();
                 System.out.println("Run:" + t);
                 System.out.println("eh= " + t.getUncaughtExceptionHandler());
                 throw new RuntimeException();
             }
-        });
+        };
+        System.out.println("By execute");
+        exec.execute(r);
+
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println();
+        System.out.println("By submit");
+        exec.submit(r);
     }
 }

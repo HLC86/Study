@@ -1,15 +1,30 @@
 package com.my.example;
 
+class FinalTest{
+	private int i = 0;
+
+	public int getI() {
+		return i;
+	}
+
+	public void setI(int i) {
+		this.i = i;
+	}
+	
+}
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Tester t = new Tester();
-        OuterClass out = new OuterClass();
-        OuterClass.InnerClass innerClass = out.get();
-        t = null;
-        out = null;
-        System.gc();
-        innerClass.test();
+    	
+    	
+//        Tester t = new Tester();
+//        OuterClass out = new OuterClass();
+//        OuterClass.InnerClass innerClass = out.get();
+//        t = null;
+//        out = null;
+//        System.gc();
+//        innerClass.test();
 //
 //        if (args.length > 0 && "stop".equals(args[0])) {
 //            System.out.println("stopped");

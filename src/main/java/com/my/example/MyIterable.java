@@ -16,13 +16,9 @@ public class MyIterable implements Iterable<String> {
 	public static void main(String[] argsStrings) {
 		String[] ssStrings = { "a", "b", "c" };
 		MyIterable iterable = new MyIterable(ssStrings);
-		MyIterator iterator = iterable.iterator();
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next());
-		}
 
         for(String s: iterable){
-
+            System.out.println(s);
         }
 	}
 
