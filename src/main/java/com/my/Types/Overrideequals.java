@@ -1,4 +1,4 @@
-package com.my.string;
+package com.my.Types;
 
 public class Overrideequals {
 	private int i=0;

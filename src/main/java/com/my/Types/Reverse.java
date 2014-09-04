@@ -1,4 +1,4 @@
-package com.my.string;
+package com.my.Types;
 
 public class Reverse {
 	static void revertByChar(char[] arr, int start, int end) {

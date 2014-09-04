@@ -1,4 +1,4 @@
-package com.my.string;
+package com.my.Types;
 
 public class ContextOptimize {
 	private String s = "(a+(b*c))*(d*(f*j)))";
