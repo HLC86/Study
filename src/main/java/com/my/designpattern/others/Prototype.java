@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-import com.my.hashmap.HashMap;
+import com.my.Types.HashMap;
 
 abstract class Shape implements Cloneable {
 	int id;

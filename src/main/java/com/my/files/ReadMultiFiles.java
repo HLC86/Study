@@ -1,4 +1,4 @@
-package com.my.zip;
+package com.my.files;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -23,7 +23,7 @@
  * questions.
  */
 
-package com.my.hashmap;
+package com.my.Types;
 import java.util.AbstractSet;
 import java.util.Collection;
 import java.util.Iterator;

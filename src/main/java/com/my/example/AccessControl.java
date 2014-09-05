@@ -1,7 +1,5 @@
 package com.my.example;
 
-import com.my.interfac.A1;
-
 class A2 {
 	private int x = 0;
 
@@ -10,7 +8,7 @@ class A2 {
 	}
 }
 
-// The levels of access control from ¡°most access¡± to ¡°least access¡± are public,
+// The levels of access control from ï¿½ï¿½most accessï¿½ï¿½ to ï¿½ï¿½least accessï¿½ï¿½ are public,
 // protected, package access (which has no keyword), and private
 public class AccessControl {
 
@@ -19,7 +17,7 @@ public class AccessControl {
 		A2 a = new A2();
 		a.getX();// protected is the same as package access when in the same
 					// package.
-		A1 a1 = new A1();
+		//A1 a1 = new A1();
 		// a1.getX();
 	}
 

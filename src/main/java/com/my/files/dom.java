@@ -1,4 +1,4 @@
-package com.my.xml;
+package com.my.files;
 
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;

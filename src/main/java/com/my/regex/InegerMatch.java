@@ -1,4 +1,4 @@
-package com.my.patterns;
+package com.my.regex;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;

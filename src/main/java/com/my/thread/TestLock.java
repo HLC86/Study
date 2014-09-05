@@ -1,4 +1,4 @@
-package com.my.thread.locks;
+package com.my.thread;
 
 class P {
 	public void printN(int i) {

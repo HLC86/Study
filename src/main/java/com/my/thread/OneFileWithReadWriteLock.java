@@ -1,4 +1,4 @@
-package com.my.thread.locks;
+package com.my.thread;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

@@ -1,6 +1,6 @@
-package com.my.hashmap;
+package com.my.Types;
 
-import com.my.hashmap.HashMap;
+import com.my.Types.HashMap;
 
 import java.util.Iterator;
 import java.util.Map;

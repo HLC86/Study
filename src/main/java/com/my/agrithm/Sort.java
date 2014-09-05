@@ -1,7 +1,5 @@
 package com.my.agrithm;
 
-import com.my.interfac.interface1;
-
 public class Sort {
 
 	public void bubbleSort(int[] arr) {

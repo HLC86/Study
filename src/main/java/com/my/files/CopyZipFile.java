@@ -1,4 +1,4 @@
-package com.my.zip;
+package com.my.files;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

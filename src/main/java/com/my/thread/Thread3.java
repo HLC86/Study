@@ -1,4 +1,4 @@
-package com.my.thread.locks;
+package com.my.thread;
 
 class R implements Runnable {
 

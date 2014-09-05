@@ -23,10 +23,12 @@
  * questions.
  */
 
-package com.my.hashmap;
+package com.my.Types;
 import java.io.*;
 import java.util.AbstractCollection;
-import com.my.hashmap.AbstractMap;
+
+import com.my.Types.AbstractMap;
+
 import java.util.AbstractSet;
 import java.util.Collection;
 import java.util.ConcurrentModificationException;
