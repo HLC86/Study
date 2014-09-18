@@ -2,6 +2,7 @@ package com.my.jdk17;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
+import java.nio.file.FileSystems;
 import java.nio.file.FileVisitResult;
 import java.nio.file.FileVisitor;
 import java.nio.file.Files;
@@ -10,7 +11,10 @@ import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.nio.file.attribute.FileStoreAttributeView;
+import java.nio.file.spi.FileSystemProvider;
 import java.util.Objects;
+import java.util.Random;
 
 public class NIO2Action {
 	public void copyMove() throws IOException {
@@ -62,6 +66,7 @@ public class NIO2Action {
 
 	public static void main(String[] args) {
 		new NIO2Action().walkFileTree();
-		//Ree
+		//FileSystemProvider
+		Random r = new Random();
 	}
 }
