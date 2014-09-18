@@ -6,6 +6,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.concurrent.TimeUnit;
 
 public class Logon implements Serializable {
@@ -17,17 +18,21 @@ public class Logon implements Serializable {
 	private Date date = new Date();
 	private String username;
 	private transient String password;
+	private HashSet<String> userNames;
 
 	public Logon(String username, String password) {
 		this.username = username;
 		this.password = password;
+		userNames = new HashSet<>();
+		userNames.add(username);
 	}
 
 	public String toString() {
-		return String.format("logon info: username: %s, date: %s, password: %s", username, date, password);
+		return String.format("logon info: username: %s, date: %s, password: %s, username in hashset: %s", username,
+				date, password, userNames.toArray()[0]);
 	}
 
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 
 		Logon logon = new Logon("Hello", "world");
@@ -35,12 +40,12 @@ public class Logon implements Serializable {
 		ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream("logon.out"));
 		objectOutputStream.writeObject(logon);
 		objectOutputStream.close();
-		
+
 		TimeUnit.SECONDS.sleep(1);
-		
+
 		ObjectInputStream in = new ObjectInputStream(new FileInputStream("logon.out"));
 		System.out.println("after");
-		logon = (Logon)in.readObject();
+		logon = (Logon) in.readObject();
 		System.out.println(logon);
 		in.close();
 	}

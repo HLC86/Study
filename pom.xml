@@ -8,6 +8,12 @@
 	<packaging>jar</packaging>
 	<name>Study</name>
 
+	<parent>
+		<groupId>com.pointcarbon</groupId>
+		<artifactId>pointcarbon-pom</artifactId>
+		<version>16</version>
+	</parent>
+
 	<scm>
 		<developerConnection>scm:git:https://github.com/rohmboid/Study.git</developerConnection>
 		<connection>scm:git:https://github.com/rohmboid/Study.git</connection>
@@ -24,22 +30,27 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>4.0.5.RELEASE</version>
+			<version>3.1.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
-			<version>4.0.5.RELEASE</version>
+			<version>3.1.2.RELEASE</version>
 		</dependency>
-		<dependency>
+		<!-- dependency>
 			<groupId>com.oracle</groupId>
 			<artifactId>ojdbc6</artifactId>
 			<version>11.2.0.3.0</version>
-		</dependency>
+		</dependency -->
 		<dependency>
 			<groupId>org.neo4j</groupId>
 			<artifactId>neo4j-cypher-compiler-2.1</artifactId>
 			<version>2.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>net.wimpi</groupId>
+			<artifactId>telnetd-x</artifactId>
+			<version>2.1.1</version>
 		</dependency>
 	</dependencies>
 
