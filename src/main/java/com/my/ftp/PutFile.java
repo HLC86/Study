@@ -14,7 +14,7 @@ public class PutFile {
 		FTPClient ftp = new FTPClient();
 
 		try {
-			ftp.connect("pccisftp01d.emea1.ciscloud");//whether success
+			ftp.connect("C668HCN.int.thomsonreuters.com");//whether success
 			System.out.println("connecting to server ...");
 			int reply = ftp.getReplyCode();
 			if(!FTPReply.isPositiveCompletion(reply)){
@@ -22,14 +22,14 @@ public class PutFile {
 				return;
 			}
 			
-			if(!ftp.login("user", "password")){
+			if(!ftp.login("pcadmin", "Hgg41kkt")){
 				System.out.println("log in failed");
 				return;
 			};//whether succeed
 			System.out.println("log in successfully ...");
 			
-			InputStream output = new FileInputStream("target/2.txt");
-			ftp.appendFile("2.txt", output);
+			InputStream output = new FileInputStream("target/1.txt");
+			ftp.appendFile("testfolder/2.txt", output);
 			System.out.println("transfer file... done ...");
 			output.close();
 			ftp.noop();

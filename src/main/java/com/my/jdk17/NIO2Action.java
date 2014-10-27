@@ -2,25 +2,19 @@ package com.my.jdk17;
 
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
-import java.nio.file.FileSystems;
 import java.nio.file.FileVisitResult;
-import java.nio.file.FileVisitor;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.SimpleFileVisitor;
 import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.nio.file.attribute.FileStoreAttributeView;
-import java.nio.file.spi.FileSystemProvider;
-import java.util.Objects;
 import java.util.Random;
 
 public class NIO2Action {
 	public void copyMove() throws IOException {
 		Path srcPath = Paths.get("/tmp/src.txt");
 		Path dstPath = Paths.get("/tmp/dst.txt");
-
 		Files.copy(srcPath, dstPath, StandardCopyOption.COPY_ATTRIBUTES, StandardCopyOption.REPLACE_EXISTING);
 		Files.move(srcPath, dstPath, StandardCopyOption.ATOMIC_MOVE);
 	}
