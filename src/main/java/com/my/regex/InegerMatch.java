@@ -49,16 +49,30 @@ public class InegerMatch {
         System.out.println(s.replaceAll("[aeiou]", "_"));//9
 */
 
-        String s = "KI-datatrbcall";
+        //String s = "KI-datatrbcall";
         //System.out.println(Arrays.toString(s.split("\\s|[a-zA-Z]+")));
         //System.out.println(s.split("^(\\s|[a-zA-Z]+)").length);
-        Pattern p = Pattern.compile("KI-(.*?)(-product)*?");
-        Matcher m = p.matcher(s);
+//        Pattern p = Pattern.compile("KI-(.*?)(-product)*?");
+//        Matcher m = p.matcher(s);
 //        for(int i =0;m.find();i++){
 //           System.out.println(m.group(1));
 //        }
-        m.matches();
-String g1 = null;
-        System.out.println("a"+g1);
+//        m.matches();
+//        String g1 = null;
+//        System.out.println("a"+g1);
+        String filename="VTLocation_SDI.Incremental";
+        String Rex="^(?!VTLocation_SDI\\.Incremental$|(.*\\.temp)$).*$";
+        System.out.println(filename.matches(Rex));
+
+        //fwd: http://blog.sina.com.cn/s/blog_72b1bc6a01014hnf.html
+//        String reg="^(?!.*(不合谐)).*$";//用到了前瞻
+//        System.out.println("不管信不信,反正现在很不合谐".matches(reg));//false不通过
+//        System.out.println("不管信不信,反正现在非常合谐".matches(reg));//true通过
+//        System.out.println("不合谐在某国是普遍存在的".matches(reg));//false不通过
+//
+//        reg="^.*(?<!(不合谐))$";//用到了后顾
+//        System.out.println("不管信不信,反正现在很不合谐".matches(reg));//false不通过
+//        System.out.println("不管信不信,反正现在非常合谐".matches(reg));//true通过
+//        System.out.println("不合谐在某国是普遍存在的".matches(reg));//true通过
     }
 }

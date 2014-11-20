@@ -10,6 +10,7 @@ import java.io.OutputStream;
 public class AutoCloseable {
 
 	public static void main(String[] args) {
+		boolean b = "abc".endsWith("");
 		//same as using( ... ) in c#
 		//Suitable for all class implements AutoCloseable
 		try (InputStream in = new FileInputStream("src.txt");
