@@ -3,6 +3,7 @@ package com.my.regex;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -60,19 +61,27 @@ public class InegerMatch {
 //        m.matches();
 //        String g1 = null;
 //        System.out.println("a"+g1);
-        String filename="VTLocation_SDI.Incremental";
-        String Rex="^(?!VTLocation_SDI\\.Incremental$|(.*\\.temp)$).*$";
-        System.out.println(filename.matches(Rex));
+//        String filename="VTLocation_SDI.Incremental";
+//        String Rex="^(?!VTLocation_SDI\\.Incremental$|(.*\\.temp)$).*$";
+//        System.out.println(filename.matches(Rex));
 
         //fwd: http://blog.sina.com.cn/s/blog_72b1bc6a01014hnf.html
-//        String reg="^(?!.*(不合谐)).*$";//用到了前瞻
-//        System.out.println("不管信不信,反正现在很不合谐".matches(reg));//false不通过
-//        System.out.println("不管信不信,反正现在非常合谐".matches(reg));//true通过
-//        System.out.println("不合谐在某国是普遍存在的".matches(reg));//false不通过
+//        String reg="^(?!.*(abc)).*$";//prefix
+//        System.out.println("lfjdlajflsjfabc".matches(reg));//false
+//        System.out.println("afalfkjlassbc".matches(reg));//true
+//        System.out.println("abcxxxxxxxxxxxxx".matches(reg));//false
 //
-//        reg="^.*(?<!(不合谐))$";//用到了后顾
-//        System.out.println("不管信不信,反正现在很不合谐".matches(reg));//false不通过
-//        System.out.println("不管信不信,反正现在非常合谐".matches(reg));//true通过
-//        System.out.println("不合谐在某国是普遍存在的".matches(reg));//true通过
+//        reg="^.*(?<!(abc))$";//suffix
+//        System.out.println("xxxxxxxxxxxxxabc".matches(reg));//false
+//        System.out.println("axxxxxxxxxxxbc".matches(reg));//true
+//        System.out.println("abcxxxxxxxxxxx".matches(reg));//true
+
+        int max = Integer.MAX_VALUE;
+        long res =0;
+        Random r = new Random();
+        for(int i =0;i<max;i++){
+            res+=r.nextInt(10);
+        }
+        System.out.print(res);
     }
 }

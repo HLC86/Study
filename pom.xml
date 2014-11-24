@@ -8,12 +8,6 @@
 	<packaging>jar</packaging>
 	<name>Study</name>
 
-	<parent>
-		<groupId>com.pointcarbon</groupId>
-		<artifactId>pointcarbon-pom</artifactId>
-		<version>30</version>
-	</parent>
-
 	<scm>
 		<developerConnection>scm:git:https://github.com/rohmboid/Study.git</developerConnection>
 		<connection>scm:git:https://github.com/rohmboid/Study.git</connection>
@@ -63,11 +57,6 @@
 			<artifactId>nekohtml</artifactId>
 			<version>1.9.20</version>
 		</dependency>
-    <dependency>
-      <groupId>com.oracle</groupId>
-      <artifactId>ojdbc6</artifactId>
-      <version>11.1.0.7.0</version>
-    </dependency>
   </dependencies>
 
 	<build>

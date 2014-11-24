@@ -14,7 +14,7 @@
 
   <context:property-placeholder location="classpath:example-app.properties,classpath:activemq.properties" />
 
-  <!-- Import monitoring beans with embedded Jetty support -->
+  <!-- Import monitoring csv with embedded Jetty support -->
   <import resource="classpath:monitoring-commons-jetty-spring.xml" />
 
   <bean id="consumersInfo" class="com.pointcarbon.monitoring.beans.ConsumersInfo">
