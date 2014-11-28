@@ -5,13 +5,13 @@ package com.my.agrithm;
  */
 public class data {
     public static void main(String[] args) {
-        int len = 10;
+        int len = 100000;
         SNode first = null;
         SNode current = first;
         for (int i = 1; i <= len; i++) {
             SNode tmp = new SNode();
             tmp.data = i;
-            if(first == null){
+            if (first == null) {
                 first = tmp;
                 current = first;
                 continue;
@@ -20,10 +20,43 @@ public class data {
             current.next = tmp;
             current = tmp;
         }
-        print(first);
-        fold(first, len);
+        findLast(first, 70000);
+        findLast2(first, 70000);
+        //print(first);
+        //fold(first, len);
 
         //GetMinNotExisting();
+    }
+
+    private static int findLast(SNode l, int n) {
+        Long start = System.currentTimeMillis();
+        SNode p1 = l;
+        SNode p2 = l;
+        for (int i = 0; i < n; i++) {
+            p1 = p1.next;
+        }
+        while (p1.next != null) {
+            p1 = p1.next;
+            p2 = p2.next;
+        }
+        System.out.println("findLast:" + (System.currentTimeMillis() - start));
+        return p2.data;
+    }
+
+    private static int findLast2(SNode l, int n) {
+        Long start = System.currentTimeMillis();
+        SNode p1 = l;
+        int cnt = 1;
+        while (p1.next != null) {
+            p1 = p1.next;
+            cnt++;
+        }
+        p1 = l;
+        for (int i = 0; i < cnt - n; i++) {
+            p1 = p1.next;
+        }
+        System.out.println("findLast2:" + (System.currentTimeMillis() - start));
+        return p1.data;
     }
 
     private static void fold(SNode n, int len) {
